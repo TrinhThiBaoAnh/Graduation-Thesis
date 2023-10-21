@@ -56,7 +56,7 @@ conda install pillow numpy matplotlib
 conda install -c anaconda jupyter
 ```
 ### Dataset
-
+```
 - Extract the folders and copy them under "Endoscope-WL" folder
 - The datasets are ordered as follows in "Endoscope-WL" folder:
 |-- $DATASET_NAME$_Splited
