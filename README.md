@@ -59,49 +59,10 @@ conda install pillow numpy matplotlib
 conda install -c anaconda jupyter
 ```
 ### Dataset
-- Download the training and testing dataset from this link: [Experiment Dataset](https://drive.google.com/drive/folders/1FneOIY5OC0gaIHceBqYXqj5GCdutcLfv?usp=sharing)
+
 - Extract the folders and copy them under "Endoscope-WL" folder
 - The datasets are ordered as follows in "Endoscope-WL" folder:
-- TrainDataset and TestDataset are used in Table 4 & 5.
-- CVC-ClinicDB_Splited and Kvasir_Splited are used in Table 3.
-```
-|-- TrainDataset
-|   |-- CVC-ClinicDB
-|   |   |-- images
-|   |   |-- masks
-|   |-- Kvasir
-|       |-- images
-|       |-- masks
-
-|-- TestDataset
-|   |-- CVC-300
-|   |   |-- images
-|   |   |-- masks
-|   |-- CVC-ClinicDB
-|   |   |-- images
-|   |   |-- masks
-|   |-- CVC-ColonDB
-|   |   |-- images
-|   |   |-- masks
-|   |-- ETIS-LaribPolypDB
-|   |   |-- images
-|   |   |-- masks
-|   |-- Kvasir
-|       |-- images
-|       |-- masks
-
-|-- CVC-ClinicDB_Splited
-|   |-- testSplited
-|   |   |-- images
-|   |   |-- masks
-|   |-- trainSplited
-|   |   |-- images
-|   |   |-- masks
-|   |-- validationSplited
-|   |   |-- images
-|   |   |-- masks
-
-|-- Kvasir_Splited
+|-- $DATASET_NAME$_Splited
 |   |-- testSplited
 |   |   |-- images
 |   |   |-- masks
@@ -120,43 +81,6 @@ conda install -c anaconda jupyter
 - Download the pretrained Mixtransformer from this link: [Pretrained Model](https://drive.google.com/drive/folders/1FLtIfDHDaowqyF_HhmORFMlRzCpB94hV?usp=sharing)
 - Put the pretrained models under "Pretrained" folder
 ## Evaluation
-We computed all metrics using the freely available ParaNet Matlab tool with `./eval/main_GA.m` or `./eval/main_LA.m`.
-
-One can download [saved ESFPNet model](https://drive.google.com/drive/folders/1I4vsts-dfyUgrnbKi-Z8XQYVhVICYpOs?usp=share_link) and then use `ESFPNet_Endoscope_ImageWrite.ipynb` to generate results for checking.
-
-
-### Autofluorescence Bronchoscopic Segmentation Results
-Quantitative Comparsion (Table 2):
-<div align=left><img src="https://github.com/dumyCq/ESFPNet/blob/main/results/QuantitativeComparsion.JPG" width="600" alt="Result"/></div>
-
-Sample of AFB Segmentation Results (Figure 3):
-<div align=left><img src="https://github.com/dumyCq/ESFPNet/blob/main/results/ImageResult.jpg" width="600" alt="Result"/></div>
-
-### Autofluorescence Bronchoscopic Video Clip Analysis
-ESFPNet detection and segmentation test on a video clip (case 21405_198, Figure 4)
-<div align=left><img src="https://github.com/dumyCq/ESFPNet/blob/main/results/VideoTest.jpg" width="600" alt="Result"/></div>
-
-
-Animated GIF Result View 
-
-| AFB video Clip | Ground Truth |Segmentation Result |
-| :---: | :---: | :---: |
-|<div align=center><img src="https://github.com/dumyCq/ESFPNet/blob/main/results/OriginalFrames_10FPS_360.gif" width="180" alt="Result"/></div>|<div align=center><img src="https://github.com/dumyCq/ESFPNet/blob/main/results/GroundTruth_10FPS_360.gif" width="180" alt="Result"/></div>| <div align=center><img src="https://github.com/dumyCq/ESFPNet/blob/main/results/Prediction_10FPS_360.gif" width="180" alt="Result"/></div>|
-
-### Polyp Segmentation Figure Results
-Quantitative Comparison in Learning Ability (Table 3)
-<div align=left><img src="https://github.com/dumyCq/ESFPNet/blob/main/results/LABest.JPG" width="400" alt="Result"/></div>
-
-Quantitative Comparison in Power balance between Learning Ability and Generalizability Capbility (Table 5)
-<div align=left><img src="https://github.com/dumyCq/ESFPNet/blob/main/results/EITSBest.JPG" width="800" alt="Result"/></div>
-
-Sample of Polyp Segmentation Results (Figure 5)
-<div align=left><img src="https://github.com/dumyCq/ESFPNet/blob/main/results/PublicResult.jpg" width="600" alt="Result"/></div>
-
-### Saved ESFPNet Model And Image Results For Polyp Dataset
-The saved ESFPNet model and generated image results for Table 3, 4, and 5 are stored [here (Polyp Datasets' Models and Image Results)](https://drive.google.com/drive/folders/1I4vsts-dfyUgrnbKi-Z8XQYVhVICYpOs?usp=share_link).
-
-In addtion, the evaluation results are stored in each folder result.txt
 
 ### Citation
 If you think this paper helps, please cite:
